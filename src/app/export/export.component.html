@@ -1,0 +1,26 @@
+<div class="nav navbar-nav">
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+     <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+      <fieldset class='form-group'>
+        <legend class="text-center"></legend>
+        <div class="form-group" [ngClass]="{ 'has-danger': f.submitted && !email.valid }"> 
+          <input type='text' placeholder='User ID' class='form-control' autofocus='autofocus' 
+          name="email" [(ngModel)]="model.email" #email="ngModel" required />
+          <label *ngIf="f.submitted && !email.valid" class="text-danger">ID is required</label>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-danger': f.submitted && !password.valid }"> 
+          <input type='password' placeholder='Password' class='form-control' required 
+          name="password" [(ngModel)]="model.password" #password="ngModel" />
+          <label *ngIf="f.submitted && !password.valid" class="text-danger">Password is required</label>
+        </div>
+         
+        <div class='form-actions'>
+          <button class='btn btn-primary btn-block'>Login</button>
+        </div>
+      </fieldset>  
+   </form> 
+  </div>
+</div>
+</div> 
+  

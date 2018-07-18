@@ -1,0 +1,55 @@
+<nav class="navbar navbar-light bg-faded">
+<div class="row align-items-center">
+    <div class="col-md-3"><span >Select registration year:</span></div>
+    <form class="form-inline my-2 my-lg-0" name="form" (ngSubmit)="doExport()" #f="ngForm" novalidate>  
+    <div class="col-md-9">
+    <select class="form-control" name="selectedYear" [(ngModel)]="selectedYear">
+        <option value="">All records</option>
+        <option *ngFor="let year of years"  value="{{year}}">{{year}}</option>
+    </select> 
+    </div>
+     <div class="col-md-3">
+     <button class="btn btn-outline-primary my-2 my-sm-0 " type="submit">Export</button>
+    </div>
+    </form>
+    
+    <div class="col-md-2 offset-md-3">
+    <a [routerLink]="['/export']">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Logout</button>
+    </a> 
+    </div> 
+  </div>
+</nav>
+  
+<div class="card">  
+  <div class="card-block">
+    <h6 class="card-title">showing the registrations for {{year}}</h6>
+      
+ <table class="table" style="font-size: 10px;">
+  <thead class="thead-default">
+    <tr>
+      <th></th>
+      <th>First Name</th><th>Last Name</th><th>gender</th>
+      <th>address</th><th>city</th><th>state</th><th>zip</th>
+      <th>email</th><th>phone</th>
+      <th>registration type</th><th>meal preferences</th>
+      <th>payment amount</th><th>payment option</th>
+    </tr>
+  </thead>
+  <tbody> 
+    <tr *ngFor="let item of entries">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.first_name}}</td><td>{{item.last_name}}</td><td>{{item.gender}}</td>
+      <td>{{item.address}}</td><td>{{item.city}}</td><td>{{item.state}}</td><td>{{item.zip}}</td>
+      <td>{{item.email}}</td><td>{{item.phone}}</td>
+      <td>{{item.registration_type}}</td><td>{{item.meal_preferences}}</td>
+      <td>{{item.payment_amount}}</td><td>{{item.payment_option}}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination [boundaryLinks]="true" [totalItems]="totalItems" [itemsPerPage]="rowperpage"
+[(ngModel)]="currentPage" class="pagination-sm" (pageChanged)="pageChanged($event)"
+       previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+  </div>
+</div> 
+ 

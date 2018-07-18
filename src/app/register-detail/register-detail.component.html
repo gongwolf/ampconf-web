@@ -1,0 +1,52 @@
+<div>
+<div class="alert alert-success">
+  <h4 class="alert-heading">Thank you!</h4>
+  <p>Your conference registration has been submitted. 
+   A confirmation mail was sent to {{email}}.</p>
+  <p class="mb-0">We look forward to your attendance. 
+  <span *ngIf="data?.payment_option=='Credit'">
+	<b>Please make sure to fill out 
+	<a class="text-primary" (click)="downloadPaymentForm()">THIS FORM</a> 
+	if you're paying with credit card.</b></span>
+  </p>
+</div>
+ 
+<p>Here's the information we received: </p>
+<table class="table">
+<tr *ngIf="data?.first_name"><td>First Name: </td><td>{{data?.first_name}}</td></tr>
+<tr *ngIf="data?.middle_initial"><td>Middle Initial: </td><td>{{data?.middle_initial}}</td></tr>
+<tr *ngIf="data?.last_name"><td>Last Name: </td><td>{{data?.last_name}}</td></tr>
+<tr *ngIf="data?.gender"><td>Gender: </td><td>{{data?.gender}}</td></tr>
+<tr *ngIf="data?.ethnicity"><td>Ethnicity: </td><td>{{data?.ethnicity}}</td></tr>
+<tr *ngIf="data?.address"><td>Address: </td><td>{{data?.address}}</td></tr>
+<tr *ngIf="data?.city"><td>City: </td><td>{{data?.city}}</td></tr>
+<tr *ngIf="data?.state"><td>State: </td><td>{{data?.state}}</td></tr>
+<tr *ngIf="data?.zip"><td>Zip: </td><td>{{data?.zip}}</td></tr>
+<tr *ngIf="data?.email"><td>E-Mail: </td><td>{{data?.email}}</td></tr>
+<tr *ngIf="data?.phone"><td>Phone (include area code): </td><td>{{data?.phone}}</td></tr>
+<tr *ngIf="data?.registration_type"><td>Registration Type: </td><td>{{data?.registration_type}}</td></tr>
+<tr *ngIf="data?.program_affiliation"><td>Program Affiliation: </td><td>{{data?.program_affiliation}}</td></tr>
+<tr *ngIf="data?.institution"><td>Institution: </td><td>{{data?.institution}}</td></tr>
+<tr *ngIf="data?.registration_type_other"><td>Other Registration Type: </td><td>{{data?.registration_type_other}}</td></tr>
+<tr *ngIf="data?.industry_other"><td>Other Industry: </td><td>{{data?.industry_other}}</td></tr>
+<tr *ngIf="data?.meal_preferences"><td>Meal Preferences: </td><td>{{data?.meal_preferences}}</td></tr>
+<tr *ngIf="data?.discipline"><td>Discipline: </td><td>{{data?.discipline}}</td></tr>
+<tr *ngIf="data?.major"><td>Major: </td><td>{{data?.major}}</td></tr>
+<tr *ngIf="data?.classification"><td>Classification: </td><td>{{data?.classification}}</td></tr>
+<tr *ngIf="data?.presenter"><td>Are you a presenter? </td><td>{{data?.presenter}}</td></tr>
+<tr *ngIf="data?.team_presentation"><td>If yes, is this a team presentation? </td><td>{{data?.team_presentation}}</td></tr>
+<tr *ngIf="data?.contact_number"><td>If yes, please provide contact number. (Include area code) </td><td>{{data?.contact_number}}</td></tr>
+<tr *ngIf="data?.member_names"><td>If yes, please provide other team member names. </td><td>{{data?.member_names}}</td></tr>
+<tr *ngIf="data?.presentation_title"><td>Presentation Title: </td><td>{{data?.presentation_title}}</td></tr>
+<tr *ngIf="data?.Abstract"><td>Abstract: </td><td [innerHTML]="data?.Abstract"></td></tr>
+<tr *ngIf="data?.category"><td>Presentation Category: </td><td>{{data?.category}}</td></tr>
+<tr *ngIf="data?.faculty_name"><td>Mentor/Faculty Name (first and last): </td><td>{{data?.faculty_name}}</td></tr>
+<tr *ngIf="data?.faculty_title"><td>Mentor/Faculty Title: </td><td>{{data?.faculty_title}}</td></tr>
+<tr *ngIf="data?.faculty_institution"><td>Mentor/Faculty Institution: </td><td>{{data?.faculty_institution}}</td></tr>
+<tr *ngIf="data?.faculty_department"><td>Mentor/Faculty Department: </td><td>{{data?.faculty_department}}</td></tr>
+<tr *ngIf="data?.faculty_email"><td>Mentor/Faculty Email: </td><td>{{data?.faculty_email}}</td></tr>
+<tr *ngIf="data?.payment_amount"><td>Payment Amount: </td><td>{{data?.payment_amount}}</td></tr>
+<tr *ngIf="data?.payment_option"><td>Payment Type: </td><td>{{data?.payment_option}}</td></tr>
+</table>
+ 
+</div>
