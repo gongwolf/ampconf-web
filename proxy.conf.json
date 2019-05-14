@@ -4,11 +4,5 @@
     "changeOrigin": true,
     "secure": false,
     "logLevel": "debug"
-  },
-  "localhost":{
-    "target": "http://localhost",
-    "changeOrigin": true,
-    "secure": false,
-    "logLevel": "debug"
   }
-}
+} 

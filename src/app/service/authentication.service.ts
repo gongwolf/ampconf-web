@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-const SERVICE_URL = 'http://mynmamp.nmsu.edu/ampconfapi';
+const SERVICE_URL = 'http://localhost:8080/ampconfapi';
 
 @Injectable()
 export class AuthenticationService {
@@ -11,18 +11,17 @@ export class AuthenticationService {
   constructor(private http: Http) { }
 
   login(email: string, password: string) {
-    return this.http.post(SERVICE_URL + '/authenticate.php',
+    return this.http.post(SERVICE_URL + '/authenticate.php', 
       JSON.stringify({ email: email, password: password }))
       .map((response: Response) => {
-        console.log(response);
-        const user = response.json();
-
-        if(user && user.token) {
+        const user = response.json(); 
+         
+        if(user && user.token) { 
           localStorage.setItem('currentUser', JSON.stringify(user));
         }
-      });
+      }); 
   }
-
+    
   logout() {
       localStorage.removeItem('currentUser');
    }

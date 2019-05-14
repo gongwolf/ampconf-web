@@ -6,18 +6,18 @@
         <div class="col-5 required" [ngClass]="{'has-danger':!(registerForm.controls['first_name'].valid || (registerForm.controls['first_name'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">First Name: </label>
         <input type="text" class="form-control form-control-sm" formControlName="first_name">
-        </div>
+        </div> 
         <div class="col-2">
       	<label class="col-form-label col-form-label-sm">Middle Initial: </label>
         <input type="text" class="form-control form-control-sm" formControlName="middle_initial">
         </div>
-
+        
         <div class="col-5 required" [ngClass]="{'has-danger':!(registerForm.controls['last_name'].valid || (registerForm.controls['last_name'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Last Name: </label>
         <input type="text" class="form-control form-control-sm" formControlName="last_name">
         </div>
     </div>
-
+    
     <div class="row form-group">
         <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['gender'].valid || (registerForm.controls['gender'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Gender: </label>
@@ -38,49 +38,49 @@
              <option value="Hispanic_Latino">Hispanic/Latino</option>
              <option value="Native_Hawaiin_Pacific_Islander">Native Hawaiian/Pacific Islander</option>
              <option value="White">White</option>
-         </select>
+         </select>  
         </div>
     </div>
-
+    
     <div class="row form-group">
         <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['address'].valid || (registerForm.controls['address'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Address: </label>
         <input type="text" class="form-control form-control-sm" formControlName="address">
         </div>
     </div>
-
+    
     <div class="row form-group">
         <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['city'].valid || (registerForm.controls['city'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">City: </label>
         <input type="text" class="form-control form-control-sm" formControlName="city">
         </div>
-
+        
         <div class="col-3 required" [ngClass]="{'has-danger':!(registerForm.controls['state'].valid || (registerForm.controls['state'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">State: </label>
 		<select class="form-control form-control-sm" formControlName="state">
 			 <option value="">-- Select One --</option>
              <option *ngFor="let item of states"  value="{{item.code}}">{{item.name}}</option>
-         </select>
+         </select> 
         </div>
-
+        
         <div class="col-3 required" [ngClass]="{'has-danger':!(registerForm.controls['zip'].valid || (registerForm.controls['zip'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Zip: </label>
         <input type="text" class="form-control form-control-sm" formControlName="zip">
         </div>
     </div>
-
+    
     <div class="row form-group">
         <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['email'].valid || (registerForm.controls['email'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">E-Mail: </label>
         <input type="text" class="form-control form-control-sm" formControlName="email">
         </div>
-
+        
         <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['phone'].valid || (registerForm.controls['phone'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Phone (include area code): </label>
         <input type="text" class="form-control form-control-sm" formControlName="phone">
         </div>
     </div>
-
+    
     <div class="row form-group">
         <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['registration_type'].valid || (registerForm.controls['registration_type'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Registration Type: </label>
@@ -91,43 +91,43 @@
          </select>
         </div>
     </div>
-
-    <div class="row form-group" [hidden]="!registerForm.value.registration_type ||
+    
+    <div class="row form-group" [hidden]="!registerForm.value.registration_type || 
          registerForm.value.registration_type=='Other'">
         <div class="col-6">
 		<label class="col-form-label col-form-label-sm">Program Affiliation: </label>
         <select class="form-control form-control-sm" (change)="onSelectAffiliation($event.target.value)"
         formControlName="program_affiliation">
-             <option value="">-- Select One --</option>
-             <option *ngFor="let item of affiliations"  value="{{item.name}}">{{item.name}}</option>
+             <option value="">-- Select One --</option> 
+             <option *ngFor="let item of affiliations"  value="{{item.name}}">{{item.name}}</option> 
          </select>
         </div>
         <div class="col-6">
 		<label class="col-form-label col-form-label-sm">Institution: </label>
         <select class="form-control form-control-sm" formControlName="institution">
-             <option value="">-- Select One --</option>
+             <option value="">-- Select One --</option>  
              <option *ngFor="let item of institutions"  value="{{item}}">{{item}}</option>
          </select>
         </div>
     </div>
-
+    
    <div class="row form-group" *ngIf="registerForm.value.registration_type=='Other'">
         <div class="col-12">
 		<label class="col-form-label col-form-label-sm">Other Registration Type: </label>
 		<input type="text" class="form-control form-control-sm" formControlName="registration_type_other">
         </div>
     </div>
-
-    <div class="row form-group" *ngIf="registerForm.value.registration_type=='Industry' &&
+    
+    <div class="row form-group" *ngIf="registerForm.value.registration_type=='Industry' && 
         registerForm.value.program_affiliation=='Other'">
         <div class="col-12">
 		<label class="col-form-label col-form-label-sm">If Other, please specify the Affiliation: </label>
 		<input type="text" class="form-control form-control-sm" formControlName="industry_other">
         </div>
     </div>
-
+    
     <div class="row form-group">
-        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['meal_preferences'].valid ||
+        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['meal_preferences'].valid || 
         (registerForm.controls['meal_preferences'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Meal Preferences: </label>
         <select class="form-control form-control-sm"  formControlName="meal_preferences">
@@ -139,12 +139,12 @@
         </div>
     </div>
     </fieldset>
-
+ 
     <fieldset *ngIf="registerForm.value.registration_type=='Undergraduate Student'">
     <hr>
     <strong><font size="4">Undergraduate Students Only</font></strong>
     <div class="row form-group">
-        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['discipline'].valid ||
+        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['discipline'].valid || 
         (registerForm.controls['discipline'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Discipline: </label>
         <select class="form-control form-control-sm"  formControlName="discipline">
@@ -156,16 +156,16 @@
              <option value="Physical_Science">Physical Science</option>
          </select>
         </div>
-
-        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['major'].valid ||
+        
+        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['major'].valid || 
         (registerForm.controls['major'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Major: </label>
         <input type="text" class="form-control form-control-sm" formControlName="major">
-        </div>
+        </div> 
     </div>
-
+    
    <div class="row form-group">
-        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['classification'].valid ||
+        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['classification'].valid || 
         (registerForm.controls['classification'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Classification: </label>
         <select class="form-control form-control-sm"  formControlName="classification">
@@ -178,22 +178,22 @@
          </select>
         </div>
     </div>
-
+    
     <div class="row form-group">
-    	<div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['presenter'].valid ||
+    	<div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['presenter'].valid || 
         (registerForm.controls['presenter'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Are you a presenter? </label>
 		<div class="col-sm-10">
         <div class="form-check form-check-inline">
           <label class="form-check-label col-form-label-sm">
-            <input class="form-check-input form-control-sm" type="radio"
+            <input class="form-check-input form-control-sm" type="radio" 
             formControlName="presenter" value="yes" (change)="onPresenterChange($event)">
             Yes
           </label>
         </div>
         <div class="form-check form-check-inline">
           <label class="form-check-label col-form-label-sm">
-            <input class="form-check-input form-control-sm" type="radio"
+            <input class="form-check-input form-control-sm" type="radio" 
             formControlName="presenter" value="no" (change)="onPresenterChange($event)">
             No
           </label>
@@ -201,11 +201,11 @@
         </div>
         </div>
     </div>
-
+    
     <div class="jumbotron" style="padding:1em;" *ngIf="registerForm.value.presenter=='yes'">
         <div class="col-12"><label class="col-form-label col-form-label-sm">Reminder: all the team members who will make the presentation must register.</label></div>
 
-       <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['team_presentation'].valid ||
+       <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['team_presentation'].valid || 
         (registerForm.controls['team_presentation'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">If yes, is this a team presentation? </label>
         <select class="form-control form-control-sm"  formControlName="team_presentation">
@@ -214,34 +214,34 @@
               <option value="No">No</option>
          </select>
         </div>
-
-     	<div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['contact_number'].valid ||
+     	
+     	<div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['contact_number'].valid || 
         (registerForm.controls['contact_number'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">If yes, please provide contact number. (Include area code)</label>
         <input type="text" class="form-control form-control-sm" formControlName="contact_number">
-        </div>
-
-        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['member_names'].valid ||
+        </div> 
+        
+        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['member_names'].valid || 
         (registerForm.controls['member_names'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">If yes, please provide other team member names.</label>
         <input type="text" class="form-control form-control-sm" formControlName="member_names">
         </div>
-
-        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['presentation_title'].valid ||
+        
+        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['presentation_title'].valid || 
         (registerForm.controls['presentation_title'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Presentation Title</label>
         <input type="text" class="form-control form-control-sm" formControlName="presentation_title">
         </div>
-
-        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['Abstract'].valid ||
+        
+        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['Abstract'].valid || 
         (registerForm.controls['Abstract'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Abstract (200 words or less).</label>
-        <ckeditor debounce="500" formControlName="Abstract"
+        <ckeditor debounce="500" formControlName="Abstract" 
 		[config]="cdkconfig">
 	    </ckeditor>
         </div>
-
-        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['category'].valid ||
+        
+        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['category'].valid || 
         (registerForm.controls['category'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Presentation Category.</label>
         <select class="form-control form-control-sm"  formControlName="category">
@@ -254,45 +254,45 @@
          </select>
         </div>
     </div>
-
-    <b>Mentor/Faculty Advisor</b>
+    
+    <b>Mentor/Faculty Advisor</b> 
     <div class="row form-group">
-        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_name'].valid ||
+        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_name'].valid || 
         (registerForm.controls['faculty_name'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Name (first and last): </label>
         <input type="text" class="form-control form-control-sm" formControlName="faculty_name">
         </div>
-
-        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_title'].valid ||
+        
+        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_title'].valid || 
         (registerForm.controls['faculty_title'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Title (i.e. Professor, Associate Professor): </label>
         <input type="text" class="form-control form-control-sm" formControlName="faculty_title">
         </div>
     </div>
-
+    
     <div class="row form-group">
-        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_institution'].valid ||
+        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_institution'].valid || 
         (registerForm.controls['faculty_institution'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Institution: </label>
         <input type="text" class="form-control form-control-sm" formControlName="faculty_institution">
         </div>
-
-        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_department'].valid ||
+        
+        <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_department'].valid || 
         (registerForm.controls['faculty_department'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Department: </label>
         <input type="text" class="form-control form-control-sm" formControlName="faculty_department">
         </div>
     </div>
-
+    
     <div class="row form-group">
-        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_email'].valid ||
+        <div class="col-12 required" [ngClass]="{'has-danger':!(registerForm.controls['faculty_email'].valid || 
         (registerForm.controls['faculty_email'].pristine && !touched))}">
 		<label class="col-form-label col-form-label-sm">Mentor/Faculty Email: </label>
         <input type="text" class="form-control form-control-sm" formControlName="faculty_email">
         </div>
     </div>
     </fieldset>
-
+    
     <hr>
     <strong><font size="4">REGISTRATION FEES</font></strong>
     <div class="row">
@@ -301,9 +301,9 @@
 	    (Through {{regDeadline}})</font>
     	</div>
 	</div>
-
+    
     <fieldset>
-
+ 
     <div class="row">
 	  <label class="form-check-label col-form-label-sm col-6">New Mexico AMP Scholars/Faculty/Staff &amp; Affiliates</label>
 	  <div class="col-6">
@@ -322,14 +322,14 @@
 	  <input class="form-check-input form-control-sm" formControlName="payment_amount"
 	  type="radio" value="Check-Other"> $50</div>
 	</div>
-
+	 
 	 <br>
 	 <div class="row">
 		<div class="col-6">
 		  <font color="maroon">Absolutely no fees will be refunded beyond<br> {{regDeadline}}. </font>
     	</div>
 	</div>
-
+	
 	<div class="row">
 	  <label class="form-check-label col-form-label-sm col-6"></label>
 	  <div class="col-6">
@@ -337,25 +337,25 @@
 	  type="radio" value="Check"> Check</div>
 	</div>
 	<div class="row form-group">
-	  <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['payment_option'].valid ||
+	  <div class="col-6 required" [ngClass]="{'has-danger':!(registerForm.controls['payment_option'].valid || 
         (registerForm.controls['payment_option'].pristine && !touched))}">
 	  <label class="col-form-label col-form-label-sm">Payment Type: </label>
 	  </div>
 	  <div class="col-6">
 	  <input class="form-check-input form-control-sm" formControlName="payment_option"
-	  type="radio" value="Credit"> Credit Card
+	  type="radio" value="Credit"> Credit Card 
 	  <a class="text-primary" (click)="downloadPaymentForm()">(click here for downloadable form)</a></div>
 	</div>
 	<div class="row">
 	  <label class="form-check-label col-form-label-sm col-6"></label>
 	  <div class="col-6">
 	  <input class="form-check-input form-control-sm" formControlName="payment_option"
-	  type="radio" value="Waived"> Waived (New Mexico AMP at NMSU)
+	  type="radio" value="Waived"> Waived (NMAMP at NMSU)
 	  </div>
 	</div>
-
+ 
     </fieldset>
-
+   
 	<br>
 	<div class="form-group row">
       <div class="offset-sm-6">
@@ -363,4 +363,4 @@
       </div>
     </div>
   </form>
-</div>
+</div> 
