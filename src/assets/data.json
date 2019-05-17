@@ -1,0 +1,287 @@
+{
+"year": "2018",
+"deadline": "TBD",
+
+"states":[
+  {
+    "code": "AL",
+    "name": "Alabama"
+  },
+  {
+    "code": "AK",
+    "name": "Alaska"
+  },
+  {
+    "code": "AZ",
+    "name": "Arizona"
+  },
+  {
+    "code": "AR",
+    "name": "Arkansas"
+  },
+  {
+    "code": "CA",
+    "name": "California"
+  },
+  {
+    "code": "CO",
+    "name": "Colorado"
+  },
+  {
+    "code": "CT",
+    "name": "Connecticut"
+  },
+  {
+    "code": "DE",
+    "name": "Delaware"
+  },
+  {
+    "code": "DC",
+    "name": "District Of Columbia"
+  },
+  {
+    "code": "FL",
+    "name": "Florida"
+  },
+  {
+    "code": "GA",
+    "name": "Georgia"
+  },
+  {
+    "code": "HI",
+    "name": "Hawaii"
+  },
+  {
+    "code": "ID",
+    "name": "Idaho"
+  },
+  {
+    "code": "IL",
+    "name": "Illinois"
+  },
+  {
+    "code": "IN",
+    "name": "Indiana"
+  },
+  {
+    "code": "IA",
+    "name": "Iowa"
+  },
+  {
+    "code": "KS",
+    "name": "Kansas"
+  },
+  {
+    "code": "KY",
+    "name": "Kentucky"
+  },
+  {
+    "code": "LA",
+    "name": "Louisiana"
+  },
+  {
+    "code": "ME",
+    "name": "Maine"
+  },
+  {
+    "code": "MD",
+    "name": "Maryland"
+  },
+  {
+    "code": "MA",
+    "name": "Massachusetts"
+  },
+  {
+    "code": "MI",
+    "name": "Michigan"
+  },
+  {
+    "code": "MN",
+    "name": "Minnesota"
+  },
+  {
+    "code": "MS",
+    "name": "Mississippi"
+  },
+  {
+    "code": "MO",
+    "name": "Missouri"
+  },
+  {
+    "code": "MT",
+    "name": "Montana"
+  },
+  {
+    "code": "NE",
+    "name": "Nebraska"
+  },
+  {
+    "code": "NV",
+    "name": "Nevada"
+  },
+  {
+    "code": "NH",
+    "name": "New Hampshire"
+  },
+  {
+    "code": "NJ",
+    "name": "New Jersey"
+  },
+  {
+    "code": "NM",
+    "name": "New Mexico"
+  },
+  {
+    "code": "NY",
+    "name": "New York"
+  },
+  {
+    "code": "NC",
+    "name": "North Carolina"
+  },
+  {
+    "code": "ND",
+    "name": "North Dakota"
+  },
+  {
+    "code": "OH",
+    "name": "Ohio"
+  },
+  {
+    "code": "OK",
+    "name": "Oklahoma"
+  },
+  {
+    "code": "OR",
+    "name": "Oregon"
+  },
+  {
+    "code": "PA",
+    "name": "Pennsylvania"
+  },
+  {
+    "code": "RI",
+    "name": "Rhode Island"
+  },
+  {
+    "code": "SC",
+    "name": "South Carolina"
+  },
+  {
+    "code": "SD",
+    "name": "South Dakota"
+  },
+  {
+    "code": "TN",
+    "name": "Tennessee"
+  },
+  {
+    "code": "TX",
+    "name": "Texas"
+  },
+  {
+    "code": "UT",
+    "name": "Utah"
+  },
+  {
+    "code": "VT",
+    "name": "Vermont"
+  },
+  {
+    "code": "VA",
+    "name": "Virginia"
+  },
+  {
+    "code": "WA",
+    "name": "Washington"
+  },
+  {
+    "code": "WV",
+    "name": "West Virginia"
+  },
+  {
+    "code": "WI",
+    "name": "Wisconsin"
+  },
+  {
+    "code": "WY",
+    "name": "Wyoming"
+  },
+  {
+    "code": "NU",
+    "name": "Non US"
+  }
+],
+
+"registrationTypes":
+["Administrative", "Faculty", "General Public", 
+    "Graduate Student", "Industry", "Staff", 
+    "Undergraduate Student"
+],
+
+"affiliations": 
+[
+    {"regType": "Administrative", "name": "ADVISORY BOARD"},
+    {"regType": "Administrative", "name": "CAMP"},
+    {"regType": "Administrative", "name": "EPSCoR"},
+    {"regType": "Administrative", "name": "NMAMP"}, 
+    {"regType": "Administrative", "name": "NM MESA"},
+    {"regType": "Administrative", "name": "Other LSAMP"}, 
+    {"regType": "Administrative", "name": "USDA"},
+    {"regType": "Administrative", "name": "S-STEM"},
+    {"regType": "Administrative", "name": "STEM-H"},  
+    {"regType": "Faculty", "name": "NMAMP (URS Advisor)"},
+    {"regType": "Faculty", "name": "NMAMP (Participant Only)"},
+    {"regType": "Faculty", "name": "JUDGE"},
+    {"regType": "Graduate Student", "name": "JUDGE"}, 
+    {"regType": "Graduate Student", "name": "Other"},
+    {"regType": "Industry", "name": "NMAMP (Participant Only)"},
+    {"regType": "Industry", "name": "JUDGE"}, 
+    {"regType": "Industry", "name": "Other"},
+    {"regType": "Staff", "name": "NMAMP (Participant Only)"},
+    {"regType": "Staff", "name": "JUDGE"}, 
+    {"regType": "Staff", "name": "Other"},
+    {"regType": "Undergraduate Student", "name": "NM AMP URA/URS"},
+    {"regType": "Undergraduate Student", "name": "NM AMP SCCORE"},
+    {"regType": "Undergraduate Student", "name": "NMAMP Transfer"},
+    {"regType": "Undergraduate Student", "name": "NM MESA"},
+    {"regType": "Undergraduate Student", "name": "Other LSAMP"},
+    {"regType": "Undergraduate Student", "name": "CAMP"},
+    {"regType": "Undergraduate Student", "name": "EPSCoR"},
+    {"regType": "Undergraduate Student", "name": "SSS-STEMH"},
+    {"regType": "Undergraduate Student", "name": "S-STEM"},
+    {"regType": "Undergraduate Student", "name": "USDA"},  
+    {"regType": "Undergraduate Student", "name": "Other"}
+],
+
+"institutions": 
+{
+    "NMAMP": ["New Mexico State University", "Eastern New Mexico University", 
+    "Western New Mexico University", "New Mexico Highlands University", "New Mexico Institute of Mining and Technology", 
+    "University of New Mexico", "Northern New Mexico College"],
+    "Other LSAMP": [],
+    "NM MESA": [],
+    "ADVISORY BOARD": ["New Mexico State University", "Other"],
+    "CAMP": ["New Mexico State University"], 
+    "EPSCoR": [], 
+    "NMAMP (URS Advisor)": ["New Mexico State University", "Eastern New Mexico University", "Western New Mexico University", 
+    "New Mexico Institute of Mining and Technology", "University of New Mexico", "Northern New Mexico College"],
+    "NMAMP (Participant Only)": ["New Mexico State University", "Eastern New Mexico University", "Western New Mexico University", 
+    "New Mexico Highlands University", "New Mexico Institute of Mining and Technology", "University of New Mexico", 
+    "Northern New Mexico College"],
+    "JUDGE": ["Central New Mexico Community College","Eastern New Mexico University","Eastern New Mexico University - Roswell","Luna Community College","New Mexico Highlands University","New Mexico Inst of Mining and Technology","New Mexico State University","New Mexico State University - Alamogordo","New Mexico State University - Carlsbad Branch","New Mexico State University - Dona Ana Branch","New Mexico State University - Grants Campus","Northern New Mexico College","Santa Fe Community College","Southwestern Indian Polytechnic Institute","University of New Mexico","Western New Mexico University","Other"],
+    "Other": [],
+    "NM AMP URA/URS": ["New Mexico State University", "Eastern New Mexico University", "Western New Mexico University", 
+    "New Mexico Institute of Mining and Technology", "University of New Mexico", "Northern New Mexico College"],
+    "NM AMP SCCORE": ["Central New Mexico College", "Luna Community College", "NMSU - Alamogordo", 
+    "NMSU - Carlsbad", "NMSU - Dona Ana Community College", "NMSU - Grants", "Santa Fe Community College", 
+    "Southwestern India Polytechnical Institute"],
+    "NMAMP Transfer": ["Central New Mexico College", "Luna Community College", 
+    "NMSU - Alamogordo", "NMSU - Carlsbad", "NMSU - Dona Ana Community College", "NMSU - Grants", 
+    "Santa Fe Community College", "Southwestern India Polytechnical Institute"],
+    "USDA": ["New Mexico State University"],
+    "S-STEM": ["New Mexico State University"],
+    "SSS-STEMH": ["New Mexico State University"]
+}
+    
+}
